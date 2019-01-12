@@ -1,0 +1,37 @@
+# Permalinks
+permalink:           pretty
+
+# Setup
+title:               WF Leong
+tagline:             Data Science Blog
+url:                 http://wfl.github.io
+paginate:            2
+baseurl:             ""
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:          _sass
+  style:            :compressed
+
+# About/contact
+author:
+  name:              Zach Miller
+  url:               
+  email:             leongwe.bc@gmail.com
+
+# Custom vars
+version:             1.0.0
+github:
+  repo:              https://github.com/wfl
+
+# Gems
+gems:
+
+
+# Page List
+pages_list:       
+  About: '/about'
+  Archive: '/archive'
+  Feed: '/index.html'
