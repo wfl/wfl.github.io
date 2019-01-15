@@ -26,7 +26,6 @@ The **methodology** to solve this problem includes the following steps:
     •	Second analysis – Merge the cleaned demographic data and analyzed MTA data for second analysis to identify the final list of subway stations
 
 4. Recommendation: 
-
    ![From our initial analysis, the subway stations where the street teams would gather the email signatures from most of the target audiences are GRAND CENTRAL – 42nd ST, 34th St. – Herald Square, 42nd St. – Port Authority, Times Square – 42nd St., Fulton St., 59th St. Columbus, and 47-50 Streets - Rockefeller Center Subway Station](https://github.com/wfl/wfl.github.io/tree/master/images/Final_List_of_Stations.png). These stations are located in one of these areas: Midtown Manhattan, Battery Park, and Lincoln Square. 
 
 
@@ -41,6 +40,7 @@ The **methodology** to solve this problem includes the following steps:
 
 
 **Acknowledgement:**  
+
 This a collaborative project. I thank my teammates are [Kristin](https://github.com/kmussar/metis_project_benson) and [Torin](https://github.com/Starplatinum87) for their contributions. They make it possible for me to complete my first exploratory data analysis at Metis. 
 
 
