@@ -4,7 +4,7 @@ Project Benson Reflection
 
 The goal of the project is to help the WomenTechWomenYes (WYWT) International to identify strategic subway stations where it can deploy their street teams to gather email signature from people who have strong interest in attending the annual gala in early summer and increasing participation of women in technology. 
 
-**The methodology to solve this problem include the following steps.**
+The **methodology** to solve this problem includes the following steps:
 
 1.	Ask the questions: 
     •	How do identify the strategic subway stations? Select those with high volume of traffic. 
@@ -31,6 +31,7 @@ The goal of the project is to help the WomenTechWomenYes (WYWT) International to
 
 
 **What I have learned from this project:**
+
    •	Data: It takes a lot of time to find data sets that are useful for the analysis. Sometimes, the documentation is incomplete. So, it is best to allocate more time to search and study the data.
 
    •	Tools: If we have a collection of APIs, our analysis process could be more efficient. 
