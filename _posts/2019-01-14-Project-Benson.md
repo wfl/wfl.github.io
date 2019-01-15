@@ -43,7 +43,7 @@ The **methodology** to solve this problem includes the following steps:
 
    •	Tools: If we have a collection of APIs, our analysis process could be more efficient. 
 
-   •	Time: We must allocate a time frame for each step in the exploratory data analysis, so that an initial analysis could be completed with sufficient insights to inform us of where and how to improve our next iteration of analysis workflow.  
+   •	Time: We must allocate a time frame for each step in the exploratory data analysis, so that an initial analysis could be completed with sufficient insights to inform us of where and how to improve our next iteration of analysis.  
 
 
 
