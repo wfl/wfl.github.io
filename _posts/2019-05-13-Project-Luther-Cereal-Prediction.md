@@ -15,14 +15,14 @@ Nineteen determinants (i.e., the features) and cereal yield (i.e., the target) f
 | :---------------: | :--------:  | :--------------------------------------------------- |
 | Country | code |Three letters country codes|
 | Nature | A | Agricultural arable land (% of land area) |
-|               | Rmin | Minimum precipitation in mm |
-|               | Tavg | Mean air temperature in  degree C |
+| Nature | Rmin | Minimum precipitation in mm |
+| Nature | Tavg | Mean air temperature in  degree C |
 | Population | R | Rural population (% of total population) |
 | Technology | F | Fertilizer consumption (kilograms per hectare of arable land) |
-|                        | M| Agricultural machinery, tractors per 100 sq. km of arable land |
+| Technology | M| Agricultural machinery, tractors per 100 sq. km of arable land |
 | Economy | V | Agriculture, forestry, and fishing, value added (% of GDP) |
-|                   | Gc | GDP per capita (current US$) |
-|                   | E | Employment in agriculture (% of total employment) |
+| Economy | Gc | GDP per capita (current US$) |
+| Economy | E | Employment in agriculture (% of total employment) |
 | Cost | Dl | Pump price for diesel fuel (US$ per liter) |
 
 
@@ -46,7 +46,7 @@ At the final step, the LSDV regression model was fit again with the training dat
 | E |  -19.90 |
 | R| -30.69 |
 
-[!Figure1: Residual plot for test data](https://github.com/wfl/Project-Luther/blob/master/figures/LSDVregression_testdata_residualplot.png)
+![Figure1: Residual plot for test data](https://github.com/wfl/Project-Luther/blob/master/figures/LSDVregression_testdata_residualplot.png)
 
 
 ### Thoughts
