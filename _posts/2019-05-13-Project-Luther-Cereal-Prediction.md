@@ -1,6 +1,6 @@
----
-Project Luther: Cereal Yield Prediction
----
+
+## Project Luther: Cereal Yield Prediction
+
 
 ### Motivation: 
 
