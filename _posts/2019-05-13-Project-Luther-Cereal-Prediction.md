@@ -11,7 +11,7 @@ Increasing the world agricultural productivity is necessary to ensure there is e
 
 Nineteen determinants (i.e., the features) and cereal yield (i.e., the target) for 206 countries in a period of at least 25 years were downloaded or scraped from databases that are opened to public, which are [The Food Security Portal](http://www.foodsecurityportal.org/api), [The World Bank Data]( https://data.worldbank.org), [Climate Change Knowledge Portal]( https://climateknowledgeportal.worldbank.org), [Wikipedia]( https://en.wikipedia.org/wiki/International_wheat_production_statistics), and [Food and Agriculture Organization of United Nations](http://www.fao.org). The countries’ codes list was downloaded from [JohnSnowLabs](https://datahub.io/JohnSnowLabs/country-and-continent-codes-list). After exploring and cleaning all the data, only 11 features (see table below) in 111 countries were used to investigate their relations with the target, Ckg (Cereal yield in kg per hectare). 
 
-| Category | Features | Short Description |
+| Category | Features | Brief Description |
 | :---------------: | :--------:  | :--------------------------------------------------- |
 | Country | code |Three letters country codes|
 | Nature | A | Agricultural arable land (% of land area) |
