@@ -22,8 +22,7 @@ The dataset train_2v.csv, published on the [Kaggle webpage]( https://www.kaggle.
 | Feature | heart_disease | nominal categorical | Presence of heart disease(0 – No, 1 – Yes) |
 | Feature | ever_married | nominal categorical | Yes or No |
 | Feature | work_type | nominal categorical | Type of occupation(private, self-employed, children, govt_job, & never_worked) |
-| Feature | residence_type | nominal categorical | Area type of resident 
-(urban or rural) |
+| Feature | residence_type | nominal categorical | Area type of resident(urban or rural) |
 | Feature | avg_glucose_level | continuous numerical | Average glucose level after a meal |
 | Feature | bmi | continuous numerical | Body mass index |
 | Feature | smoking_status | nominal categorical | Smoking status(never smoked, Formerly smoked, Smokes) |
