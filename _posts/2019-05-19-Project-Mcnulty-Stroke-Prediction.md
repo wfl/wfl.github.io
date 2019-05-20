@@ -16,21 +16,17 @@ The dataset train_2v.csv, published on the [Kaggle webpage]( https://www.kaggle.
 | Feature or Target | Variable | Type | Brief description |
 | :---------------: | :--------:  | :--------:  | :--------------------------------------------------- |
 | Neither | id | label | Patient ID |
-| Feature | gender | nominal categorical | Gender of the patient  (male, female, other) |
+| Feature | gender | nominal categorical | Gender of the patient(male, female, other) |
 | Feature | age | discrete numerical | Patient’s age |
-| Feature | hypertension | nominal categorical | Suffering from hypertension 
-(0 – No, 1 – Yes) |
-| Feature | heart_disease | nominal categorical | Presence of heart disease 
-(0 – No, 1 – Yes) |
+| Feature | hypertension | nominal categorical | Suffering from hypertension(0 – No, 1 – Yes) |
+| Feature | heart_disease | nominal categorical | Presence of heart disease(0 – No, 1 – Yes) |
 | Feature | ever_married | nominal categorical | Yes or No |
-| Feature | work_type | nominal categorical | Type of occupation
-(private, self-employed, children, govt_job, & never_worked) |
+| Feature | work_type | nominal categorical | Type of occupation(private, self-employed, children, govt_job, & never_worked) |
 | Feature | residence_type | nominal categorical | Area type of resident 
 (urban or rural) |
 | Feature | avg_glucose_level | continuous numerical | Average glucose level after a meal |
 | Feature | bmi | continuous numerical | Body mass index |
-| Feature | smoking_status | nominal categorical | Smoking status
-(never smoked, Formerly smoked, Smokes) |
+| Feature | smoking_status | nominal categorical | Smoking status(never smoked, Formerly smoked, Smokes) |
 | Target | stroke | nominal categorical | Has suffered or is suffering from stroke (0 – No, 1 – Yes) |
 
 There are missing data in the bmi and smoking_status variables. There is about 30.63% (i.e., 13292 of 43400) of missing smoking_status data, a large percentage that warrants exclusion of smoking_status variable. For this project, two datasets were generated from the original train_2v dataset. The first dataset, named as dataset 1, is the full train_2v dataset that its 40% (i.e., 5499 of 13292) of the missing observations in the smoking_status variable were replaced with “never smoke” because these 5499 missing observations (See Figure 1) are patients younger than 15 years old who are unlikely to smoke, according to the findings reported in [this article](https://www.cnn.com/2018/08/22/health/cigarette-smoking-teens-parent-curve-intl/index.html). The second dataset, named as dataset 2, only contains patients who have never smoked. Since there are only 3.37% of the missing bmi observations in the original train_2v dataset, all these missing data in two datasets (i.e., dataset 1 and dataset 2) were replaced with median value of the bmi data.
