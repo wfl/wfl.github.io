@@ -1,34 +1,34 @@
 
-## Project Mcnulty: Stroke Prediction
+## Project McNulty: Stroke Prediction
 
 
 ### Motivation: 
 
-According to the [CDC](https://www.cdc.gov/stroke/index.htm), about 795,000 Americans have a stroke every year, making stroke the fifth leading cause of death and the major cause of long-term serious disability. An effective way of lowering stroke risk is healthy living. Thus, [as much as eighty percent](https://www.cdc.gov/stroke/healthy_living.htm) of the 795,000 stoke cases could be prevented if these patients were informed of their risk early enough for them to have a chance to make healthy changes in their lifestyle. 
+According to the [CDC](https://www.cdc.gov/stroke/index.htm), about 795,000 Americans have a stroke every year, making strokes the fifth leading cause of death and the major cause of long-term serious disability. An effective way of lowering stroke risk is healthy living. Thus, [as much as eighty percent](https://www.cdc.gov/stroke/healthy_living.htm) of the 795,000 stroke cases could be prevented if these patients were informed of their risk early enough for them to have a chance to make healthy changes in their lifestyle. 
 
-This project’s goal is to a model or models that can predict whether a patient has high risk of having a stroke.
+This project’s goal is to find a model or models that can predict whether a patient has high risk of having a stroke.
  
 
 ### Data
 
-The dataset train_2v.csv, published on the [Kaggle webpage]( https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data), was provided by the McKinsey & Company for a 1 day hackathon event held by Analytics Vidhya. It contains 43400 patients’ information that are represented by the variables listed in the table below:
+The dataset train_2v.csv, published on the [Kaggle webpage]( https://www.kaggle.com/asaumya/healthcare-dataset-stroke-data), was provided by McKinsey & Company for a 1 day hackathon event held by Analytics Vidhya. It contains 43400 patients’ information that are represented by the variables listed in the table below:
 
 | Feature or Target | Variable | Type | Brief description |
 | :---------------: | :--------:  | :--------:  | :--------------------------------------------------- |
 | Neither | id | label | Patient ID |
-| Feature | gender | nominal categorical | Gender of the patient(male, female, other) |
+| Feature | gender | nominal categorical | Gender of the patient (male, female, other) |
 | Feature | age | discrete numerical | Patient’s age |
-| Feature | hypertension | nominal categorical | Suffering from hypertension(0 – No, 1 – Yes) |
-| Feature | heart_disease | nominal categorical | Presence of heart disease(0 – No, 1 – Yes) |
+| Feature | hypertension | nominal categorical | Suffering from hypertension (0 – No, 1 – Yes) |
+| Feature | heart_disease | nominal categorical | Presence of heart disease (0 – No, 1 – Yes) |
 | Feature | ever_married | nominal categorical | Yes or No |
-| Feature | work_type | nominal categorical | Type of occupation(private, self-employed, children, govt_job, & never_worked) |
-| Feature | residence_type | nominal categorical | Area type of resident(urban or rural) |
+| Feature | work_type | nominal categorical | Type of occupation (private, self-employed, children, govt_job, & never_worked) |
+| Feature | residence_type | nominal categorical | Area type of resident (urban or rural) |
 | Feature | avg_glucose_level | continuous numerical | Average glucose level after a meal |
 | Feature | bmi | continuous numerical | Body mass index |
-| Feature | smoking_status | nominal categorical | Smoking status(never smoked, Formerly smoked, Smokes) |
+| Feature | smoking_status | nominal categorical | Smoking status (never smoked, Formerly smoked, Smokes) |
 | Target | stroke | nominal categorical | Has suffered or is suffering from stroke (0 – No, 1 – Yes) |
 
-There are missing data in the bmi and smoking_status variables. There is about 30.63% (i.e., 13292 of 43400) of missing smoking_status data, a large percentage that warrants exclusion of smoking_status variable. For this project, two datasets were generated from the original train_2v dataset. The first dataset, named as dataset 1, is the full train_2v dataset that its 40% (i.e., 5499 of 13292) of the missing observations in the smoking_status variable were replaced with “never smoke” because these 5499 missing observations (See Figure 1) are patients younger than 15 years old who are unlikely to smoke, according to the findings reported in [this article](https://www.cnn.com/2018/08/22/health/cigarette-smoking-teens-parent-curve-intl/index.html). The second dataset, named as dataset 2, only contains patients who have never smoked. Since there are only 3.37% of the missing bmi observations in the original train_2v dataset, all these missing data in two datasets (i.e., dataset 1 and dataset 2) were replaced with median value of the bmi data.
+There are missing data in the bmi and smoking_status variables. There is about 30.63% (i.e., 13292 of 43400) of missing smoking_status data, a large percentage that warrants exclusion of the smoking_status variable. For this project, two datasets were generated from the original train_2v dataset. The first dataset, named as dataset 1, is the full train_2v dataset that is 40% (i.e., 5499 of 13292) of the missing observations in the smoking_status variable, which were replaced with “never smoke” because these 5499 missing observations (See Figure 1) are patients younger than 15 years old who are unlikely to smoke, according to the findings reported in [this article](https://www.cnn.com/2018/08/22/health/cigarette-smoking-teens-parent-curve-intl/index.html). The second dataset, named as dataset 2, only contains patients who have never smoked. Since there are only 3.37% of the missing bmi observations in the original train_2v dataset, all these missing data in two datasets (i.e., dataset 1 and dataset 2) were replaced with median value of the bmi data.
 
 ![Figure 1: Distribution of missing values for the variable Age](https://github.com/wfl/healthcare_stroke_classification/blob/master/figures/histogram_age_missing_data.png)
 
@@ -55,11 +55,11 @@ Each of the two datasets was split into training and test sets with the 75:25 ra
 
 ![Figure 3: Best models’ ROC for dataset 1 (with smoking status)](https://github.com/wfl/healthcare_stroke_classification/blob/master/figures/ROC_bestmodels_dataset1_plot.png)  ![Figure 4: Best models’ ROC for dataset 2 (with only patients who have never smoked)](https://github.com/wfl/healthcare_stroke_classification/blob/master/figures/ROC_bestmodels_dataset2_plot.png)
 
-• The best models’ precision-recall curves (See Figures 5 and 6 below) indicated that the improvement of the sensitivity (recall) of the classifiers would reach to a point where it won’t contribute in improving the precision score, which remains a low constant value. One explanation would be that increased sensitivity in predicting the 2% minority class would result in predicting more false positives. High number of false positives and low number of true positives yield low precision score. For this project, ability to predict stroke correctly is the priority because it will save patients who are at high risk of having a stroke. The false positives are just the false alarms that don’t negatively impact the patients’ wellbeing by advising them to choose a healthy lifestyle choice.
+• The best models’ precision-recall curves (See Figures 5 and 6 below) indicated that the improvement of the sensitivity (recall) of the classifiers would reach a point where it won’t contribute in improving the precision score, which remains a low constant value. One explanation would be that increased sensitivity in predicting the 2% minority class would result in predicting more false positives. A high number of false positives and low number of true positives yield low precision score. For this project, ability to predict stroke correctly is the priority because it will save patients who are at high risk of having a stroke. The false positives are just the false alarms that don’t negatively impact the patients’ wellbeing by advising them to choose a healthy lifestyle choice.
 
 ![Figure 5: Best models’ precision-recall curves for dataset 1 (with smoking status)](https://github.com/wfl/healthcare_stroke_classification/blob/master/figures/PrecRec_bestmodels_dataset1_plot.png)  ![Figure 6: Best models’ precision-recall curves for dataset 2 (with only patients who have never smoked)](https://github.com/wfl/healthcare_stroke_classification/blob/master/figures/PrecRec_bestmodels_dataset2_plot.png)
 
-• Finally, the feature importance that was generated by Random Forest and Gradient Boosting classifiers was examined for both datasets. In general, age is the primary attribute for predicting stroke. For the full dataset (Figure 7), both classifiers indicate that bmi and avg_glucose_level were the secondary important attributes; although Random Forest also indicates that patients’ marital status, specific worktype, heart disease and hypertension are the also the main feature for prediction. However, for dataset 2 (Figure 8), both classifiers indicate that patient's marital status, avg_glucose_level, heart disease, hypertension are the secondary features that indicate whether a patient who has never smoked would have a high risk of stroke.
+• Finally, the feature importance that was generated by Random Forest and Gradient Boosting classifiers was examined for both datasets. In general, age is the primary attribute for predicting strokes. For the full dataset (Figure 7), both classifiers indicate that bmi and avg_glucose_level were the secondary important attributes; although Random Forest also indicates that patients’ marital status, specific worktype, heart disease and hypertension are also the main feature for prediction. However, for dataset 2 (Figure 8), both classifiers indicate that patients' marital status, avg_glucose_level, heart disease, hypertension are the secondary features that indicate whether a patient who has never smoked would have a high risk of stroke.
 
 ![Figure 7: Feature importance for dataset 1 (with smoking status)](https://github.com/wfl/healthcare_stroke_classification/blob/master/figures/feature_importance_dataset1_plot.png)  ![Figure 8: Feature importance for dataset 2 (with only patients who have never smoked)](https://github.com/wfl/healthcare_stroke_classification/blob/master/figures/feature_importance_dataset2_plot.png)
  

@@ -4,7 +4,7 @@
 
 ### Motivation: 
 
-Increasing the world agricultural productivity is necessary to ensure there is enough food to feed the growing world population that is estimated to double every 61 years. Note that the number 61 is cited from the article ["Population Growth Rates” written by Matt Rosenberg that was published on ThoughtCo](https://www.thoughtco.com/population-growth-rates-1435469). Let’s consider cereal productivity, what are some of the determinants that positively or negatively impact it? 
+Increasing global agricultural productivity is necessary to ensure there is enough to feed the world’s growing population that is estimated to double every 61 years. Note that the number 61 is cited from the article ["Population Growth Rates” written by Matt Rosenberg that was published on ThoughtCo](https://www.thoughtco.com/population-growth-rates-1435469). Let’s consider cereal productivity - what are some of the determinants that positively or negatively impact it? 
 
 
 ### Data
@@ -70,7 +70,7 @@ The actual and predicted cereal yields were plotted against years for a few coun
 
 ### Future Work
 
-Obviously the selected regression model is far from perfect. There are always ways to improve the estimation of the coefficients that will maximize the good-of-fit such as revisiting the feature engineering step, choosing a complex model to take into account of the non-linearity in cereal yield trends for some countries, or implementing statistical test analysis to determine the coefficients’ significant. 
+Obviously the selected regression model is far from perfect. There are always ways to improve the estimation of the coefficients that will maximize the good-of-fit such as revisiting the feature engineering step, choosing a complex model to take into account the non-linearity in cereal yield trends for some countries, or implementing statistical test analysis to determine the coefficients’ significant. 
 
 
 Please visit my [github repository](https://github.com/wfl/Project-Luther) for the detail implementation of this project. Thank you for reading. 
